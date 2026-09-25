@@ -390,6 +390,8 @@ RUN if [ "$ENABLE_binfmt_ARG" = "true" ]; then \
     fi
 
 # 可选：为 Ubuntu 26.04 的旧 Android 内核运行环境构建 systemd 257。
+ENV SYSTEMD257_ARCHIVE_SHA256=62a0bf02de2fcea3182f485a5274120171d567a8639a9e14065841773ca3c9c5
+
 RUN if [ "$ENABLE_systemd257_ARG" = "true" ]; then \
         bash /usr/local/sbin/systemd257; \
     else \
